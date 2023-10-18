@@ -1,0 +1,12 @@
+#N canvas 34 72 1186 546 12;
+#X obj 428 187 simple-mixer;
+#X obj 604 85 osc~ 440;
+#X obj 788 98 osc~ 220;
+#X obj 231 103 osc~ 110;
+#X obj 391 446 dac~;
+#X connect 0 0 4 0;
+#X connect 0 0 4 1;
+#X connect 1 0 0 1;
+#X connect 2 0 0 2;
+#X connect 3 0 0 0;
+#X connect 3 0 4 0;
