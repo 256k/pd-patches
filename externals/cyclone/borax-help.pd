@@ -1,36 +1,20 @@
-#N canvas 471 64 559 678 10;
-#X obj 2 383 cnv 3 552 3 empty empty inlets 8 12 0 13 -228856 -1 0
-;
-#X obj 2 448 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1 0
-;
-#X obj 2 627 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
-0;
-#X obj 97 427 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 473 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 408 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 492 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 454 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 511 cnv 17 3 17 empty empty 3 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 530 cnv 17 3 17 empty empty 4 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 549 cnv 17 3 17 empty empty 5 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 568 cnv 17 3 17 empty empty 6 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 587 cnv 17 3 17 empty empty 7 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 606 cnv 17 3 17 empty empty 8 5 9 0 16 -228856 -162280 0
-;
-#X obj 97 389 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
-;
-#X obj 2 654 cnv 15 552 21 empty empty empty 20 12 0 14 -233017 -33289
-0;
+#N canvas 467 24 563 690 10;
+#X obj 2 383 cnv 3 552 3 empty empty inlets 8 12 0 13 #dcdcdc #000000 0;
+#X obj 2 448 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000 0;
+#X obj 2 627 cnv 3 550 3 empty empty arguments 8 12 0 13 #dcdcdc #000000 0;
+#X obj 97 427 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 473 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 408 cnv 17 3 17 empty empty 1 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 492 cnv 17 3 17 empty empty 2 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 454 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 511 cnv 17 3 17 empty empty 3 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 530 cnv 17 3 17 empty empty 4 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 549 cnv 17 3 17 empty empty 5 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 568 cnv 17 3 17 empty empty 6 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 587 cnv 17 3 17 empty empty 7 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 606 cnv 17 3 17 empty empty 8 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 97 389 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X obj 2 654 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020 0;
 #X text 162 390 -;
 #X text 122 390 float;
 #X text 162 409 -;
@@ -55,36 +39,16 @@
 #X text 122 589 float;
 #X text 162 608 -;
 #X text 122 608 float;
-#X text 178 390 midi note number, f 47;
-#X obj 2 4 cnv 15 553 42 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#N canvas 0 22 450 278 (subpatch) 0;
-#X coords 0 1 100 -1 554 42 1 0 0;
-#X restore 2 3 graph;
-#X obj 305 4 cnv 15 250 40 empty empty empty 12 13 0 18 -128992 -233080
-0;
-#N canvas 382 141 749 319 (subpatch) 0;
-#X coords 0 -1 1 1 252 42 2 100 100;
-#X restore 304 3 pd;
-#X obj 322 28 cyclone/comment 425 13 DejaVu\ Sans\ Mono empty 0 224
-228 220 0 255 255 255 0 0 Objects cloned from Max/MSP;
-#X obj 363 4 cyclone/comment 425 24 DejaVu\ Sans\ Mono empty 0 224
-228 220 0 255 255 255 0 0 cyclone;
-#X obj 16 4 cyclone/comment 425 33 DejaVu\ Sans\ Mono empty 0 0 0 0
-0 255 255 255 0 0 borax;
-#X obj 17 62 cyclone/comment 425 14 DejaVu\ Sans\ Mono empty 0 0 0
-0 0 255 255 255 0 0 Reports note on/off info;
-#X text 117 633 (none);
-#X text 177 409 note velocity, f 47;
-#X msg 298 158 bang;
+#X text 177 390 midi note number, f 54;
+#X text 170 633 (none);
+#X text 177 409 note velocity, f 54;
 #N canvas 111 227 240 305 random_notes 0;
 #X obj 58 207 makenote;
 #X obj 103 233 outlet;
 #X obj 43 233 outlet;
 #X obj 58 42 inlet;
 #X obj 58 81 metro;
-#X obj 58 122 expr random(40 \, 70) \; random(50 \, 127) \; random
-(500 \, 2000) \; random (100 \, 1000);
+#X obj 58 122 expr random(40 \, 70) \; random(50 \, 127) \; random (500 \, 2000) \; random (100 \, 1000);
 #X obj 139 44 inlet;
 #X connect 0 0 2 0;
 #X connect 0 1 1 0;
@@ -96,66 +60,33 @@
 #X connect 5 3 4 1;
 #X connect 6 0 5 0;
 #X restore 121 147 pd random_notes;
-#X obj 121 123 tgl 15 0 empty empty empty 17 7 0 10 -228856 -1 -1 0
-1;
+#X obj 121 123 tgl 15 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 228 152 notein;
-#X obj 208 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
--1 -1;
+#X obj 208 124 bng 15 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
 #X text 141 123 <= metro;
-#X text 177 428 resets by sending note-offs and erasing events' memory
-;
-#X text 335 157 resets [borax];
-#X text 177 513 pitch of note from report, f 50;
-#X text 177 531 velocity of note from report (0 means Note-Off);
-#X text 177 456 note event number from report, f 50;
-#X text 177 493 number of voices (notes currently On), f 51;
-#X text 177 474 voice number from report (when more notes are reported)
-;
-#X text 177 551 event number from note duration report (see 6);
-#X text 177 589 event number from delta-time report (see 8), f 51
-;
-#X text 177 608 delta-time (time difference in ms) between Note-Ons
-;
-#X text 177 571 note duration (in ms) report, f 51;
-#X obj 121 186 cyclone/borax, f 30;
-#X obj 356 209 cyclone/comment 425 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 8- Note-On Delta-time;
-#X obj 321 225 cyclone/comment 263 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 7- Event of delta-time report;
-#X obj 333 244 cyclone/comment 251 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 6- Note duration;
-#X obj 295 259 cyclone/comment 256 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 5- Event of duration report;
-#X obj 290 282 cyclone/comment 278 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 4- Velocity;
-#X obj 279 300 cyclone/comment 285 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 3- Pitch;
-#X obj 263 320 cyclone/comment 271 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 2- Number of voices;
-#X obj 249 338 cyclone/comment 270 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 1- Voice number;
-#X obj 236 358 cyclone/comment 283 11 helvetica empty 0 0 0 0 0 255
-255 255 0 0 0- Note event;
-#X obj 203 356 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 218 337 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 229 318 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 239 299 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 250 280 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 265 258 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 276 242 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 290 223 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
-#X obj 298 207 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0 256;
+#X text 177 428 resets by sending note-offs and erasing events' memory;
+#X text 348 157 resets [borax];
+#X text 177 513 pitch of note from report, f 55;
+#X text 177 531 velocity of note from report (0 means Note-Off), f 55;
+#X text 177 456 note event number from report, f 55;
+#X text 177 493 number of voices (notes currently On), f 55;
+#X text 177 474 voice number from report (when more notes are reported);
+#X text 177 551 event number from note duration report (see 6), f 55;
+#X text 177 589 event number from delta-time report (see 8), f 55;
+#X text 177 608 delta-time (time difference in ms) between Note-Ons, f 55;
+#X text 177 571 note duration (in ms) report, f 55;
+#X obj 121 186 cyclone/borax, f 35;
+#X obj 77 242 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 113 242 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 160 242 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 198 243 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 240 244 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 308 258 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 315 242 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 320 226 nbx 2 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 328 210 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
 #X text 55 93 [borax] sends detailed MIDI Note information.;
-#N canvas 744 142 632 281 examples 0;
+#N canvas 645 142 632 281 examples 0;
 #X obj 80 89 notein 1;
 #X obj 102 159 pack 0 0 0, f 11;
 #X obj 102 206 route 1 2 3 4;
@@ -166,8 +97,7 @@
 #X obj 371 131 poly, f 7;
 #X text 437 167 voice # \, pitch \, velocity;
 #X text 174 160 voice # \, pitch \, velocity;
-#X text 93 32 using [borax] to route voices in the same way as [poly].
-;
+#X text 93 32 using [borax] to route voices in the same way as [poly].;
 #X connect 0 0 3 0;
 #X connect 0 1 3 1;
 #X connect 1 0 2 0;
@@ -180,20 +110,38 @@
 #X connect 7 0 5 0;
 #X connect 7 1 5 1;
 #X connect 7 2 5 2;
-#X restore 470 352 pd examples;
-#X connect 51 0 68 2;
-#X connect 52 0 68 0;
-#X connect 52 1 68 1;
-#X connect 53 0 52 0;
-#X connect 54 0 68 0;
-#X connect 54 1 68 1;
-#X connect 55 0 52 1;
-#X connect 68 0 78 0;
-#X connect 68 1 79 0;
-#X connect 68 2 80 0;
-#X connect 68 3 81 0;
-#X connect 68 4 82 0;
-#X connect 68 5 83 0;
-#X connect 68 6 84 0;
-#X connect 68 7 85 0;
-#X connect 68 8 86 0;
+#X restore 463 167 pd examples;
+#X obj 2 1 header borax;
+#X text 21 58 Reports note on/off info;
+#X text 387 209 Note-On Delta-time;
+#X text 352 226 Event of delta-time report;
+#X text 373 240 Note duration;
+#X text 340 258 Event of duration report;
+#X text 235 259 Velocity;
+#X text 198 257 Pitch;
+#X text 111 256 Voice number, f 6;
+#X text 75 256 Note event, f 5;
+#X text 156 256 # of voices, f 6;
+#X obj 328 157 bng 18 250 50 0 empty empty empty 17 7 0 10 #dcdcdc #000000 #000000;
+#X text 37 330 see also:;
+#X obj 394 340 open-else;
+#X text 453 320 <-- click;
+#X msg 394 319 noteinfo;
+#X text 109 318 Plugdata users or those with ELSE can also use [else/noteinfo] as an alternative with a limited and most common functionalities., f 42;
+#X connect 43 0 59 0;
+#X connect 43 1 59 1;
+#X connect 44 0 43 0;
+#X connect 45 0 59 0;
+#X connect 45 1 59 1;
+#X connect 46 0 43 1;
+#X connect 59 0 60 0;
+#X connect 59 1 61 0;
+#X connect 59 2 62 0;
+#X connect 59 3 63 0;
+#X connect 59 4 64 0;
+#X connect 59 5 65 0;
+#X connect 59 6 66 0;
+#X connect 59 7 67 0;
+#X connect 59 8 68 0;
+#X connect 82 0 59 2;
+#X connect 86 0 84 0;

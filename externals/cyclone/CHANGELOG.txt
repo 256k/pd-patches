@@ -3,6 +3,77 @@
 ---------------------------------------------------
 
 --------------------------------------------------
+cyclone 0.9-1 (needs at least Pd Vanilla 0.55-0):
+--------------------------------------------------
+- Improved the object browser plugin 
+
+--------------------------------------------------
+cyclone 0.9-1 (needs at least Pd Vanilla 0.55-0):
+--------------------------------------------------
+
+- Improved object browser plugin
+- Fixed some compilation bugs and improved 64 bit support
+
+--------------------------------------------------
+cyclone 0.9-0 (needs at least Pd Vanilla 0.55-0):
+--------------------------------------------------
+
+- Compilation and binaries in double precision is now supported and provided
+- [append] has been deprecated, use [list append] and [list trim] instead
+- [forward] has also been deprecated, just use [send] or regular message boxes, will you?
+- [xbendin]/[xbendin2]/[xbendout]/[xbendout2] have been deprecated, use [midiformat] and [midiparse] instead (I doubt anyone is using such badly designed and silly objects anyway)
+- The documentation has been revised and considering PlugData users, and many ELSE alternatives were added in a new 'see also' section (because ELSE is also part of PlugData), as well as Vanilla alternatives/related objects
+- Added a browser plugin for objects on right click on an empty spot of the patch
+- [trunc~] is now borrowed and equivalent to ELSE's [trunc~] which has multichannel support
+- Fixed a bug in [zl.group] where it did not load the default arg
+- Fixed regression bugs in [offer], list input works now and other things that were funny seems ok now (we introduced this bug in 0.3)
+- [buffer~]: Added support for 64-bit audio files in [buffer~] (Pd 0.55 in double precision is required for this); object has been rewritten and now uses [file which] with 0.55's functionality that allows finding files in the parent. Added support for arguments in the 'read' message and implemented 'replace' message (the object doesn't really behave 100% like the MAX original because that one is bugged as fuck)
+
+--------------------------------------------------
+cyclone 0.8-1 (needs at least Pd Vanilla 0.54-1):
+--------------------------------------------------
+
+- [zl] fixed some bugs and now the format where the mode comes after the dot (as in [zl.len]) is allowed.
+- [phaseshift~]: Fix div-by-zero and potential blow up
+- Improved/fixed seeding on random objects: [rand~] and [decide]
+
+--------------------------------------------------
+cyclone 0.8-0 (needs at least Pd Vanilla 0.54-0):
+--------------------------------------------------
+
+- Opening "all_objects" doesn't crash Pd anymore and we don't know why it did.
+- Fixed [play~] bang output to just bang once when stopping.
+- Fixed loading help file of [cyclone/snapshot~].
+- [cyclone]: added 2nd and 3rd outlet for pd version and flavour
+- [comment]: fix setting receive name from properties, fixed 'set' message at lodbang, improved loading internal symbols and made it deprecated and removed from the other help files* 
+
+* this clears the room for forks of Pd to not need to port [comment] to some other front gui, an example is PlugData, which does not support [comment] and does not have plans to. The [comment] object will stick around but will receive no further real attention other than a real crucial or minor bugs and will be kept for backwards compatibility, but it is not encouraged to use this object which will never be a proper clone of MAX's [comment] anyway - just consider using [note] from ELSE instead, because it's the actual original object now and the one that'll keep being worked on.
+
+- [number~]: made it deprecated and removed from the other help files
+
+- Revised the help files also to include the [output~] abstraction available in Pd Vanilla 0.54-0, which can take a mono input and send it to a stereo output (solely for this reason, it's best you have Pd Vanilla 0.54-0 installed for this release). For this reason the [out~] abstraction from ELSE is not being borrowed anymore.
+
+- made [minimum~] and [maximum~] deprecated, as they're basically the same as Vanilla's [min~] and [max~], with the advantage that vanilla's [min~]/[max~] can take multichannel signals as of Pd 0.54-0.
+
+- also made [pow~] and [clip~] deprecated, as they're quite similar to Vanilla's [pow~] and [clip~], also there's the advantage that vanilla's [pow~]/[clip~] can take multichannel signals.
+
+
+--------------------------------------------------
+cyclone 0.7-0 (needs at least Pd Vanilla 0.53-1):
+--------------------------------------------------
+
+- [number~] can now print 'nan' thanks to new features in Pd 0.53
+- [scope~]: Fixed resizing issues when zoomed. Added undo. Minor cosmetic changes that were considered unnecessary as it only tried to mimmick a bit more the original aspect in MAX when selecting the object and we're already failing in doing tha 100% perfectly anyway, plus other minor cosmetic improvements.
+- [comment]: We finally have a decent properties window (thanks to Tim Schoen)!!! Fixed some issues with zooming. Fixed many issues with resizing and also justification. Fixed saving parameters. Improved drawing the handle. Fixed resizing when maximum width wasn't set. Added undo. Added outline parameter. Added width parameter (this was only set before via dragging the handle in edit mode). This is now diverging from the original MAX object and is basically a clone of [else/note], an object from the ELSE library that was originally based on cyclone's [comment]. This also completes the updates to this object which was almost the last one to get updated.
+- [mtr] starting to update this object to MAX 7 at last (and this is the last one that never got updated). Added attributes @speed / @trackspeed / @loop and @embed. We missed updates to this one as it was included some time after 7.0! There are numerous things to add and we won't be able to add them all. More are yet to come until we can say we finally reached the goal of updating Cyclone to MAX 7!
+- [pink~] is now a whole new object stolen from ELSE, which has more features but it's also backwards compatible.
+- [pow~] added missing 'Pow~' alias for Linux and error/warning (like other objects that clash in Vanilla - can't believe we still missed getting all of these right)
+- [coll] now updates window if it's opened and when you use the 'read'/'readagain' messages
+- [acosh] fixed bug calculating the value
+- [record~] fixed regression bug in loading arguments
+- [out~] object, borrowed from ELSE, removed and not used in the documentation anymore. We now use [output~] which should be called from Pd's 'extra' library (it was included there in version 0.52).
+
+--------------------------------------------------
 cyclone 0.6-1 (needs at least Pd Vanilla 0.52-1):
 --------------------------------------------------
 
@@ -10,7 +81,7 @@ cyclone 0.6-1 (needs at least Pd Vanilla 0.52-1):
 - bitwise signal operators now are not "bitsafe"  
 - objects can now find and open files added to Pd's search path, affected objects: [funbuff], [mtr], [table], [seq] and [coll].
 - [scope~]/[comment]:
-  - fixed tcl error when closing a subpatch with a note object in it while in edit mode (reopening the patch would ruin things up).
+  - fixed tcl error when closing a subpatch with an object in it while in edit mode (reopening the patch would ruin things up).
   - fixed deleting the resizing handle when deleting the object.
 
 --------------------------------------------------

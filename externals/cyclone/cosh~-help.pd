@@ -1,62 +1,65 @@
-#N canvas 551 83 562 540 10;
-#X obj 6 515 cnv 15 552 21 empty empty empty 20 12 0 14 -233017 -33289
-0;
-#X obj 6 393 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
-;
-#X obj 6 437 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1 0
-;
-#X obj 6 478 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
-0;
-#X obj 119 448 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
-;
-#X text 153 409 signal;
-#X text 153 448 signal;
-#X text 153 489 (none);
-#X obj 119 409 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
-;
-#X obj 156 228 cyclone/cosh~;
-#X obj 156 153 phasor~ 2;
-#X text 289 360 0;
-#X text 285 304 pi/2;
-#X text 287 248 pi;
-#X obj 2 4 cnv 15 553 42 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#N canvas 0 22 450 278 (subpatch) 0;
-#X coords 0 1 100 -1 554 42 1 0 0;
-#X restore 2 3 graph;
-#X obj 305 4 cnv 15 250 40 empty empty empty 12 13 0 18 -128992 -233080
-0;
-#N canvas 382 141 749 319 (subpatch) 0;
-#X coords 0 -1 1 1 252 42 2 100 100;
-#X restore 304 3 pd;
-#X text 61 93 Use [cosh~] to output the hyperbolic cosine function
-of each input sample (probably only useful for mathematical calculations).
-;
-#X text 227 177 * pi;
-#X text 226 201 - pi/2;
-#X text 209 409 - input to hyperbolic cosine function;
-#X text 209 448 - output of hyperbolic cosine function;
-#X obj 156 177 *~ 3.14159;
-#X obj 156 200 -~ 1.5708;
-#X obj 371 287 cyclone/cosh~;
-#X obj 17 56 cyclone/comment 0 14 DejaVu\ Sans\ Mono empty 0 0 0 0
-0 255 255 255 0 0 Signal hyperbolic cosine function;
-#X obj 15 4 cyclone/comment 0 33 DejaVu\ Sans\ Mono empty 0 0 0 0 0
-255 255 255 0 0 cosh~;
-#X obj 322 28 cyclone/comment 0 13 DejaVu\ Sans\ Mono empty 0 224 228
-220 0 255 255 255 0 0 Objects cloned from Max/MSP;
-#X obj 363 4 cyclone/comment 0 24 DejaVu\ Sans\ Mono empty 0 224 228
-220 0 255 255 255 0 0 cyclone;
-#X obj 371 245 cyclone/number~ 1;
-#A saved 1 0 100 -inf inf #2a3434 #ffffff #b6fefd;
-#X obj 371 328 cyclone/number~;
-#A saved 0 0 100 -inf inf #2a3434 #ffffff #b6fefd;
-#X obj 497 71 cyclone/setdsp~;
-#X obj 156 255 cyclone/scope~ 123 117 256 3 128 0 3.14 0 0 0 0 205
-229 232 74 79 77 96 98 102 0 empty;
-#X connect 9 0 33 0;
-#X connect 10 0 23 0;
-#X connect 23 0 24 0;
-#X connect 24 0 9 0;
-#X connect 25 0 31 0;
-#X connect 30 0 25 0;
+#N canvas 492 76 567 509 10;
+#X obj 6 475 cnv 15 552 21 empty empty empty 20 12 0 14 #e0e0e0 #202020 0;
+#X obj 6 353 cnv 3 550 3 empty empty inlets 8 12 0 13 #dcdcdc #000000 0;
+#X obj 6 397 cnv 3 550 3 empty empty outlets 8 12 0 13 #dcdcdc #000000 0;
+#X obj 6 438 cnv 3 550 3 empty empty arguments 8 12 0 13 #dcdcdc #000000 0;
+#X obj 119 408 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X text 153 369 signal;
+#X text 153 408 signal;
+#X text 153 449 (none);
+#X obj 119 369 cnv 17 3 17 empty empty 0 5 9 0 16 #dcdcdc #9c9c9c 0;
+#X text 61 93 Use [cosh~] to output the hyperbolic cosine function of each input sample (probably only useful for mathematical calculations).;
+#X text 209 369 - input to hyperbolic cosine function;
+#X text 209 408 - output of hyperbolic cosine function;
+#X obj 497 71 cyclone/dsponoff~;
+#X obj 2 1 ./header cosh~;
+#X text 22 61 Signal hyperbolic cosine function;
+#X obj 214 166 sig~;
+#X obj 214 225 cyclone/snapshot~ 1;
+#X obj 214 255 nbx 9 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 214 142 nbx 9 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10 #dcdcdc #000000 #000000 0 256;
+#X obj 214 196 cyclone/cosh~;
+#X text 29 302 see also:;
+#X text 205 302 as a Vanilla alternative;
+#X text 369 302 and;
+#N canvas 425 211 552 420 all-trig-objects 0;
+#X obj 110 60 cyclone/acos;
+#X obj 110 87 cyclone/acosh;
+#X obj 110 115 cyclone/asin;
+#X obj 110 145 cyclone/atanh;
+#X obj 110 175 cyclone/cosh;
+#X obj 110 205 cyclone/sinh;
+#X obj 110 234 cyclone/tanh;
+#X obj 72 295 sin;
+#X obj 105 295 cos;
+#X obj 137 295 tan;
+#X obj 169 295 atan;
+#X obj 208 295 atan2;
+#X text 256 294 - trigonometric functions from Vanilla;
+#X text 109 358 All of the functions above are also present in vanilla's, f 29;
+#X obj 300 364 expr;
+#X text 338 363 or;
+#X obj 361 364 expr~;
+#X obj 285 80 cyclone/acos~;
+#X obj 285 104 cyclone/acosh~;
+#X obj 285 128 cyclone/asin~;
+#X obj 285 152 cyclone/asinh~;
+#X obj 285 176 cyclone/atan~;
+#X obj 285 200 cyclone/atan2~;
+#X text 70 19 Control data trigonometric functions from Cyclone:, f 26;
+#X obj 285 224 cyclone/atanh~;
+#X obj 392 98 cyclone/cosh~;
+#X obj 392 122 cyclone/cosx~;
+#X obj 392 144 cyclone/sinh~;
+#X obj 392 167 cyclone/sinx~;
+#X obj 392 190 cyclone/tanh~;
+#X obj 392 213 cyclone/tanx~;
+#X text 297 26 Sigal trigonometric functions from Cyclone:, f 26;
+#X obj 215 323 cos~;
+#X text 257 322 - actually a cosine wavetable;
+#X restore 401 303 pd all-trig-objects;
+#X obj 94 303 expr~ cosh($v1);
+#X connect 15 0 19 0;
+#X connect 16 0 17 0;
+#X connect 18 0 15 0;
+#X connect 19 0 16 0;

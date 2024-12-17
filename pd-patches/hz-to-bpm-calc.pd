@@ -1,0 +1,12 @@
+#N canvas 50 66 2555 1390 12;
+#X floatatom 30 120 5 0 0 0 - - - 0;
+#X msg 30 48 2;
+#X obj 30 83 expr 60000/(1000/$i1);
+#X text 27 18 Calculate BPM from hz;
+#X text 188 77 60 seconds in 1 minute in ms divided by 1000 divided by hertz;
+#X obj 68 48 inlet;
+#X obj 75 121 outlet;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 2 0 6 0;
+#X connect 5 0 2 0;
